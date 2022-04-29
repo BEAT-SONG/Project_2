@@ -1,0 +1,284 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>1조 쵝오</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Tempo - v4.7.0
+  * Template URL: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="blog5.html">prediction service</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <!-- <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
+          <li><a class="active" href="blog.html">Prediction SERVICE</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+           <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul> -->
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    {% comment %} <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <!-- <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Blog</li>
+        </ol> --> 
+        <h2>Used Car Price Prediction Service</h2>
+        <h4>We provide Used Car forecasting market search services that customers want.</h4>
+        <h5>고객이 원하는 중고차 예측 시세 검색 서비스를 제공합니다.</h5>
+      </div>
+    </section><!-- End Breadcrumbs --> {% endcomment %}
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div class="col-lg-8 entries">
+
+            <article class="entry">
+
+              <h2 class="entry-title">
+                <!-- views.py에서 받는 키 값을 받기 위해 키를 삽입 -->
+                <a>{{brand}}, {{year}}년식, {{fueltype}}, {{range}}</a>
+              </h2>
+
+              <div class="entry-img">
+                <img src="{% static 'img/blog/toyota.jpg' %}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <!-- 예측값 -->
+                <a href="blog5.html"> 18,518,000원 ~ 21,462,000원</a>
+              </h2>
+
+            </article><!-- End blog entry -->
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form action="">
+                  <input type="text">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div><!-- End sidebar search formn-->
+
+                <!-- 카테고리 선택지 -->
+                <form action="predictP...">
+                <!-- firstapp/urls.py에서 링크가 'predictP...'인 경로로 보내겠다 -->
+                    {% csrf_token %}
+                    <!-- form태그의 method가 post일 때 쓰는 코드..(?) -->
+                    <h3>Brand</h3>
+                    <select name = 'brand'>
+                        <option value='audi'>Audi</option>
+                        <option value="bmw">Bmw</option>
+                        <option value="cclass">c-class</option>
+                        <option value="focus">Focus</option>
+                        <option value="ford">Ford</option>
+                        <option value="hyundi">Hyundai</option>
+                        <option value="merc">Merc</option>
+                        <option value="skoda">Skoda</option>
+                        <option value="toyota" selected>Toyota</option>
+                        <option value="vauxhall">Vauxhall</option>
+                        <option value="vw">Vw</option>
+                    </select>
+                    <h3 >Year</h3>
+                    <select name = 'year'>
+                        <option>1991</option>
+                        <option>1995</option>
+                        <option>1998</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                        <option>2003</option>
+                        <option>2004</option>
+                        <option>2005</option>
+                        <option>2006</option>
+                        <option>2007</option>
+                        <option>2008</option>
+                        <option>2009</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option selected>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                    </select>
+                    <h3>Fuel Type</h3>
+                    <select name='fuelType'>
+                        <option>Petrol</option>
+                        <option>Diesel</option>
+                        <option selected>Hydrid</option>
+                        <option>Other</option>
+                    </select>
+                    <h3>Mileage</h3>
+                    <input type="range" min="0" max="500000" step="1000" name="range" onchange="SetValue(this)">
+                    <br>
+                    <h3>
+                    <!-- form 태그 속 태그들의 입력값을 보내는 버튼 역할 -->
+                    <input type="submit" value = "Let's predict!">
+                    </h3>
+                </form>
+              </div><!-- End sidebar categories-->
+
+              </div><!-- End sidebar recent posts-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">           
+              {% comment %} <button type="submit" onclink = "location.href = '/portfolio-details.html';" value="Submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Submit</button> {% endcomment %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>1조</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">First_songeun_yeeun_guiyoung_gwangjo</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+  <script>
+    $(document).ready(function() {
+        $( "select[name=brand]" ).val( "{{ brand_text }}" );
+        $('select[name=brand]').change(function () {
+        console.log($('select[name=brand]').val());
+        month = $('select[name=brand]').val();
+        $('.form').submit();
+        });
+    });
+  </script>
+  <script language = "javascript">
+    function SetValue(this)
+    {
+    range_val.value = this.value;
+    }
+    </script>
+
+</body>
+
+</html>
